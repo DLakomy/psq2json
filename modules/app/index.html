@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>psq2json</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.indigo.min.css" />
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* based on --pico-primary-background 
+     * relative hsl is still buggy in some browsers
+     */
+    :root {
+      --gradient-color-1: hsl(241.82, 59.46%, 40%);
+      --gradient-color-2: hsl(241.82, 59.46%, 56.47%);
+    }
+
+    #header {
+      text-align: center;
+      align-content: center;
+      background: linear-gradient(180deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 80%);
+      width: 100%;
+      height: 50px;
+      font-size: 30px;
+    }
+
+    #footer {
+      background: linear-gradient(180deg, var(--gradient-color-2) 20%, var(--gradient-color-1) 100%);
+      text-align: center;
+      min-height: 50px;
+      align-content: center;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    body {
+      height: 100vh;
+    }
+
+    .input-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #generateBtn-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    #generateBtn-container button {
+      max-width: 300px;
+      width: 80%;
+    }
+
+    .maxWidthUpTo600px {
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header" class="container-fluid">psq2json</div>
+  <main class="container">
+    <div class="maxWidthUpTo600px">
+      Sorry for poor css. How to use:
+      <ol>
+        <li>Read the <a>ReadMe</a></li>
+        <li>That's it</li>
+      </ol>
+      <div class="input-section">
+        <div id="input-plsql-section">
+          <textarea rows="7" id="inputPsql"
+            placeholder="Insert plsql object definition here (see an example below)"></textarea>
+        </div>
+        <div class="example-section">
+          Example input:
+          <pre><code id="example">create object user_object as (
+  id number
+, name varchar2(50 byte)
+, is_active boolean
+);</code></pre>
+        </div>
+      </div>
+      <div id="generateBtn-container">
+        <button id="generateBtn">Generate</button>
+      </div>
+      <div>
+        <textarea rows="7" placeholder="The result will appear here (read only)" readonly
+          aria-invalid="false"></textarea>
+      </div>
+    </div>
+  </main>
+  </div>
+  <div id="footer" class="container-fluid">Built with ❤️ in Scala, DŁ</div>
+</body>
+
+</html>
