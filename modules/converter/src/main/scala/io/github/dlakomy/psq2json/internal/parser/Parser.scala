@@ -49,5 +49,5 @@ private object Helper:
   val plsqlType =
     (declaration.pad0 ~
       fields.between(P.char('(').pad0, P.char(')').pad0).pad0
-      <* P.char(';').pad0)
+      <* P.char(';').pad0 <* P.char('/').pad0.?)
       .map(PlsqlType.apply)
