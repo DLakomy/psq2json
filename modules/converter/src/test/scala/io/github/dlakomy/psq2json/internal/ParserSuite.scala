@@ -13,8 +13,8 @@ class ParserSuite extends munit.FunSuite:
            name varchar2(50 
            )
          ,  surname varchar2( 100  )
-         , is_Active 
-          boolean
+         , born
+          date
       );"""
 
     val obtained = Parser.parse(input)
@@ -25,7 +25,7 @@ class ParserSuite extends munit.FunSuite:
           PlsqlField.Number("id"),
           PlsqlField.Text("name"),
           PlsqlField.Text("surname"),
-          PlsqlField.Boolean("is_Active")
+          PlsqlField.Date("born")
         )
       )
     )

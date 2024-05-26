@@ -32,7 +32,7 @@ private object Helper:
       <* P.ignoreCase("as").pad <* P.ignoreCase("object")
 
   val field: P[PlsqlField] =
-    val bool = P.ignoreCase("boolean").as(PlsqlField.Boolean.apply)
+    val date = P.ignoreCase("date").as(PlsqlField.Date.apply)
     // intentionally skipping other numbers and precision
     val number = P.ignoreCase("number").as(PlsqlField.Number.apply)
     val varchar2 =
@@ -40,7 +40,7 @@ private object Helper:
       P.ignoreCase("varchar2").pad0 ~ (R.digit.pad0.rep.between(P.char('(').pad0, P.char(')')))
     val text = varchar2.as(PlsqlField.Text.apply)
 
-    val typ = bool | text | number
+    val typ = date | text | number
 
     (identifier.pad ~ typ).map((ident, constr) => constr(ident))
 
