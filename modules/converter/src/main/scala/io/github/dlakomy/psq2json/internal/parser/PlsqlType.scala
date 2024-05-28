@@ -4,7 +4,11 @@ import cats.data.NonEmptyList
 
 private[psq2json] final case class PlsqlType(name: String, fields: NonEmptyList[PlsqlField])
 
-private[psq2json] enum PlsqlField:
-  case Date(name: String)
-  case Text(name: String)
-  case Number(name: String)
+/* the type dictinction actually is not useful... but let's keep it
+ * the name though must be a part of PlsqlField, to avoid pattern matching
+ * if it's the only thing necesssary...
+ */
+private[psq2json] enum PlsqlField(val name: String):
+  case Date(override val name: String)   extends PlsqlField(name)
+  case Text(override val name: String)   extends PlsqlField(name)
+  case Number(override val name: String) extends PlsqlField(name)
