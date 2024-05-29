@@ -21,7 +21,7 @@ trait OracleSharedContainerSuite extends munit.FunSuite:
       // doesn't find the driver without this ¯\_(ツ)_/¯
       DriverManager.getDrivers()
       connection = DriverManager.getConnection(
-        "jdbc:tc:oracle:21-slim-faststart:///testdb" + connParams,
+        "jdbc:tc:oracle:23-slim-faststart:///testdb" + connParams,
         "oracle",
         "oracle"
       )

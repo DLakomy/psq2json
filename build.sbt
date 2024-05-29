@@ -19,7 +19,7 @@ lazy val converter = crossProject(JVMPlatform, JSPlatform)
     libraryDependencies ++= Seq(
       "org.typelevel"           %% "cats-parse"     % "1.0.0",
       "org.testcontainers"       % "testcontainers" % testContainersVersion % Test,
-      "org.testcontainers"       % "oracle-xe"      % testContainersVersion % Test,
+      "org.testcontainers"       % "oracle-free"    % testContainersVersion % Test,
       "org.scalameta"           %% "munit"          % "1.0.0"               % Test,
       "com.oracle.database.jdbc" % "ojdbc11"        % "23.4.0.24.05"        % Test,
       "io.circe"                %% "circe-parser"   % "0.14.7"              % Test
