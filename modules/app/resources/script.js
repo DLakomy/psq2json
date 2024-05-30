@@ -1,6 +1,6 @@
 import { Converter } from '../target/scala-3.3.3/app-fastopt/main.js';
 
-const input = document.getElementById('inputPsql');
+const input = document.getElementById('inputPlsql');
 const output = document.getElementById('resultPlsql');
 
 document.getElementById('generateBtn').onclick = () => {
