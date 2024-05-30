@@ -17,7 +17,7 @@ lazy val converter = crossProject(JVMPlatform, JSPlatform)
   .in(file("modules/converter"))
   .settings(
     libraryDependencies ++= Seq(
-      "org.typelevel"           %% "cats-parse"     % "1.0.0",
+      "org.typelevel"          %%% "cats-parse"     % "1.0.0",
       "org.testcontainers"       % "testcontainers" % testContainersVersion % Test,
       "org.testcontainers"       % "oracle-free"    % testContainersVersion % Test,
       "org.scalameta"           %% "munit"          % "1.0.0"               % Test,

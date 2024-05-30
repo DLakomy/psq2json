@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>psq2json</title>
   <link rel="stylesheet" href="resources/style.css" />
+  <script type="module" src="resources/script.js" />
 </head>
 
 <body>
   <div id="header" class="container-fluid">psq2json</div>
-  <main class="container">
-    <div class="maxWidthUpTo600px">
+  <main class="container-fluid">
+    <div class="maxWidthUpTo800px">
       Sorry for poor css. How to use:
       <ol>
         <li>Read the <a>ReadMe</a></li>
@@ -24,10 +25,11 @@
         </div>
         <div class="example-section">
           Example input:
-          <pre><code id="example">create object user_object as (
-  id number
-, name varchar2(50 byte)
-, is_active boolean
+          <pre><code id="example">create or replace type user_obj as object (
+  id      number
+, name    varchar2(50)
+, surname varchar2(100)
+, born    date
 );</code></pre>
         </div>
       </div>
@@ -35,8 +37,7 @@
         <button id="generateBtn">Generate</button>
       </div>
       <div>
-        <textarea rows="7" placeholder="The result will appear here (read only)" readonly
-          aria-invalid="false"></textarea>
+        <textarea id="resultPlsql" rows="7" placeholder="The result will appear here (read only)" readonly></textarea>
       </div>
     </div>
   </main>
