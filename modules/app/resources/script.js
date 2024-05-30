@@ -8,3 +8,8 @@ document.getElementById('generateBtn').onclick = () => {
   output.setAttribute('aria-invalid', !result);
   output.value = result || error;
 };
+
+input.oninput = () => {
+  output.value = '';
+  output.removeAttribute('aria-invalid');
+};
