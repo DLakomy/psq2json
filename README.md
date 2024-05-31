@@ -23,16 +23,19 @@ In the root directory:
 sbt compile
 sbt app/fastOptJS
 ```
+The JS part will be described later (the `How to test?` part).
 
 **PROD:**
+
+[Node.js](https://nodejs.org/en) is needed. Don't forget about `npm install`.
 ```
 cd modules/app
 npm run build
 ```
-Check the `modules/app/dist` dir after this.
+Check the `modules/app/dist-prod` dir after this.
 ### How to test?
 
-In the root diretory `sbt test` - tests only the Converter module. Docker must be available.
+In the root diretory `sbt test` - tests only the Converter module. [Docker](https://www.docker.com) must be available.
 
 BTW you can export an env variable `PSQ2JSON_TEST_TC_REUSABLE=1`, and configure Testcontainers to allow container reuse (check the documentation for details). It's much faster this way, but the feature is experimental. The test commands are idempotent, so there is no harm in reusing.
 
