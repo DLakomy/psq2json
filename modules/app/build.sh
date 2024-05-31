@@ -6,5 +6,5 @@ pwd=$(pwd)
 cd ../..
 sbt app/fullOptJS
 cd "$pwd"
-rm dist/*
-parcel build index.html --no-cache --dist-dir dist --log-level info 
+rm -f dist-prod/*
+parcel build index.html --no-cache --dist-dir dist-prod --log-level info --no-source-maps

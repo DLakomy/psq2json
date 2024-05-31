@@ -34,4 +34,5 @@ metals.sbt
 # npm and its friends
 node_modules/
 .parcel-cache/
-dist/
+dist-dev/
+dist-prod/
