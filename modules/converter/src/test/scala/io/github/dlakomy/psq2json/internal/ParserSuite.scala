@@ -4,7 +4,6 @@ import cats.data.NonEmptyList
 
 class ParserSuite extends munit.FunSuite:
   test("should parse sample type") {
-
     // lack of margin is intentional, to make it even messier
     // more tests should be written in the future
     val input =

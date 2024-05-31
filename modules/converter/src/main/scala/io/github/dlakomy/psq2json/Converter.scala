@@ -4,7 +4,7 @@ import io.github.dlakomy.psq2json.internal.parser.{Parser, PlsqlType}
 
 object Converter:
   /** @param plsqlTypeDefinition
-    *   create or replace type..."" statement
+    *   "create or replace type..." statement
     * @return
     *   an error message or a create function PL/SQL statement;
     *   this function serializes the type to json and returns it
