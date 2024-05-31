@@ -46,4 +46,4 @@ To check the webpage, do this:
 cd modules/app
 npm run start
 ```
-In the terminal you'll see and adress. Open and see the result 😉
+In the terminal you'll see the address. Open it and see the result 😉
