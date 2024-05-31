@@ -5,7 +5,7 @@ There are better ways to do so, but (for sport) I've created a Scala module pars
 
 The point was to play with [Scala.js](https://www.scala-js.org) and [Testcontainers](https://github.com/testcontainers) a bit (not the first time, but the first time on my own).
 
-You can see it here: TODO
+You can see it here: https://dlakomy.github.io/psq2json/
 
 ### What works:
 - generation of a json serialiser (as a PL/SQL function) from PL/SQL object definition
