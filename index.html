@@ -1,0 +1,6 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>psq2json</title><link rel="stylesheet" href="index.01c4af97.css"><script type="module" src="index.34001d30.js"></script></head><body> <div id="header" class="container-fluid">psq2json</div> <main class="container-fluid"> <div class="maxWidthUpTo800px"> Sorry for poor css. How to use: <ol> <li>Read the <a target="_blank" href="https://github.com/DLakomy/psq2json/blob/main/README.md">ReadMe</a></li> <li>That's it</li> </ol> <div class="input-section"> <div id="input-plsql-section"> <textarea rows="7" id="inputPlsql" placeholder="Insert plsql object definition here (see an example below)"></textarea> </div> <div class="example-section"> Example input: <pre><code id="example">create or replace type user_obj as object (
+  id      number
+, name    varchar2(50)
+, surname varchar2(100)
+, born    date
+);</code></pre> </div> </div> <div id="generateBtn-container"> <button id="generateBtn">Generate</button> </div> <div> <textarea id="resultPlsql" rows="7" placeholder="The result will appear here (read only)" readonly></textarea> </div> </div> </main> <div id="footer" class="container-fluid">Built with ❤️ in Scala, DŁ</div> </body></html>
