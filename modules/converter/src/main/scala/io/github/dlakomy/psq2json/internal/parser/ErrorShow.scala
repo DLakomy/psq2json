@@ -74,7 +74,6 @@ given Show[Error] with
             val contextSize = 2
 
             val start = caret.line - contextSize
-            val end   = caret.line + 1 + contextSize
 
             val elipsis = "..."
 
@@ -87,21 +86,12 @@ given Show[Error] with
 
             val line = lines(caret.line)
 
-            val afterContext: Option[String] =
-              Some(lines.slice(caret.line + 1, end).mkString(nl)).filter(_.nonEmpty)
-
-            val afterElipsis: Option[String] =
-              if (end >= lines.length - 1) None
-              else Some(elipsis)
-
             List(
               beforeElipsis,
               beforeContext,
               Some(line),
               Some((1 to caret.col).map(_ => " ").mkString("") + "^"),
-              Some(errorMsg),
-              afterContext,
-              afterElipsis
+              Some(errorMsg)
             ).flatten.mkString(nl)
       case None =>
         s"""|at offset ${error.failedAtOffset}

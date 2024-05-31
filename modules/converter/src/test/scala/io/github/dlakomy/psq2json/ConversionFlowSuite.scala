@@ -9,7 +9,7 @@ import fixtures.TestCases
 class ConversionFlowSuite extends OracleSharedContainerSuite:
 
   TestCases.foreach: testCase =>
-    test(testCase.name):
+    test("Fixture: " + testCase.name):
       // prepare
       val conn = getSharedConnection()
       conn.executeStatement(testCase.createTypeSql)
