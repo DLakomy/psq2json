@@ -10,7 +10,7 @@ You can see it here: TODO
 - serving it via static webpage with no backend (the logic is a js script)
 
 ### Limitations:
-All the fields must be of the type `varchar2`/`number`/`date`. `varchar2` can't specify the length unit (`byte`/`char`).
+All the fields must be of the type `varchar2`/`number`/`date`. `varchar2` can't specify the length unit (`byte`/`char`). Some keywords are not unsupported... In general don't expect anything more fancy than the example to work.
 
 ### How to build?
 
