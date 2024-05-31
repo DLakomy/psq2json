@@ -1,4 +1,6 @@
 # Psq2json (POC)
+[![Converter module CI](https://github.com/DLakomy/psq2json/actions/workflows/scala.yml/badge.svg)](https://github.com/DLakomy/psq2json/actions/workflows/scala.yml)
+
 There are better ways to do so, but (for sport) I've created a Scala module parsing a PL/SQL subset, to generate a function converting a type to json. In case you need to do so, I suggest finding a PL/SQL native way.
 
 The point was to play with [Scala.js](https://www.scala-js.org) and [Testcontainers](https://github.com/testcontainers) a bit (not the first time, but the first time on my own).
